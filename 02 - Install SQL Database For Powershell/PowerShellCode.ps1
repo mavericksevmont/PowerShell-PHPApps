@@ -5,5 +5,6 @@ Video    : https://www.youtube.com/watch?v=inzf-Sn80gg&list=PL60ejEuI_nxuWG17kyS
 Title    : 02 - Install SQL Database For Powershell
 #>
 
+# Test connectivity to mssql database
 $Conn = @{'server' = 'localhost'; 'database' = 'webtool'; 'table' = 'newhire';}
 Invoke-Sqlcmd -ServerInstance $Conn.server -Database $Conn.database -Query "SELECT * FROM $($Conn.table)"
