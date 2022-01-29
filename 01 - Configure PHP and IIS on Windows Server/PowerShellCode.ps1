@@ -4,3 +4,6 @@
 
 # Install needed Windows features
 Install-WindowsFeature -Name Web-Server, Web-CGI, Web-Windows-Auth, RSAT-AD-Tools, RSAT-AD-PowerShell -IncludeManagementTools
+
+# Test if PHP is working
+& php -v
